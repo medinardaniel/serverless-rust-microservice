@@ -21,7 +21,7 @@ The Lambda function requires the following permissions:
 
 ## Database Integration
 
-Although this specific Lambda function does not directly interact with a database, it counts objects within an S3 bucket typically used to store photo image files. This data can be utilized to monitor storage needs, inform user quotas, or track photo uploads over time. If needed, the function can be extended to record count results in a database for historical tracking and analysis.
+This Lambda function interacts with an S3 bucket, a non-relational database. It counts objects within the bucket typically used to store photo image files. This data can be utilized to monitor storage needs, inform user quotas, or track photo uploads over time. If needed, the function can be extended to record count results in a database for historical tracking and analysis.
 
 ## Service Implementation
 
@@ -35,4 +35,14 @@ To implement and deploy this service:
 6. Test the function manually through the AWS Console or programmatically via AWS SDKs to ensure proper execution and permissions.
 
 For manual testing, invoke the function without any specific input, as the function does not require event data to count the objects in the predefined S3 bucket.
+
+## Function Invocation Screenshot
+
+Here is how the function looks when invoked. It returned the bucket contains 561 items:
+
+![Lambda Function Invocation](lambda-invoke.png)
+
+Here is a screenshot of the S3 bucket, where you can see the bucket indeed contains 561 items:
+
+![S3 Bucket](s3-bucket.png)
 
