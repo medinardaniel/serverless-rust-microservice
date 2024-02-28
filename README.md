@@ -40,7 +40,7 @@ For manual testing, invoke the function without any specific input, as the funct
 
 Here is how the function looks when invoked. It returned the bucket contains 561 items:
 
-![Lambda Function Invocation](lambda-invoke.png)
+![Lambda Function Invocation](lambda-invoked.png)
 
 Here is a screenshot of the S3 bucket, where you can see the bucket indeed contains 561 items:
 
